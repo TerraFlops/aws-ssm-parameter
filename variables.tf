@@ -19,3 +19,8 @@ variable "ignore_value_changes" {
   type = bool
   default = false
 }
+
+variable "tier" {
+  type = string
+  default = "Standard"
+}

@@ -3,6 +3,7 @@ resource "aws_ssm_parameter" "ssm_parameter" {
   name = var.name
   type = var.secure ? "SecureString": "String"
   value = var.value
+  tier = var.tier
   overwrite = true
 }
 
@@ -11,6 +12,7 @@ resource "aws_ssm_parameter" "ssm_parameter_ignore_changes" {
   name = var.name
   type = var.secure ? "SecureString": "String"
   value = var.value
+  tier = var.tier
   overwrite = true
   lifecycle {
     ignore_changes = [
